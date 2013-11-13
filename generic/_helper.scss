@@ -15,37 +15,37 @@
 /**
  * Add/remove floats
  */
-.float--right   { float:right!important; }
-.float--left    { float:left !important; }
-.float--none    { float:none !important; }
+.float--right   { float:right !important; }
+.float--left    { float:left  !important; }
+.float--none    { float:none  !important; }
 
 
 /**
  * Text alignment
  */
-.text--left     { text-align:left  !important; }
-.text--center   { text-align:center!important; }
-.text--right    { text-align:right !important; }
+.text--left     { text-align:left   !important; }
+.text--center   { text-align:center !important; }
+.text--right    { text-align:right  !important; }
 
 
 /**
  * Font weights
  */
-.weight--light      { font-weight:300!important; }
-.weight--normal     { font-weight:400!important; }
-.weight--semibold   { font-weight:600!important; }
+.weight--light      { font-weight:300 !important; }
+.weight--normal     { font-weight:400 !important; }
+.weight--semibold   { font-weight:600 !important; }
 
 
 /**
  * Add/remove margins
  */
-.push           { margin:       $base-spacing-unit!important; }
-.push--top      { margin-top:   $base-spacing-unit!important; }
-.push--right    { margin-right: $base-spacing-unit!important; }
-.push--bottom   { margin-bottom:$base-spacing-unit!important; }
-.push--left     { margin-left:  $base-spacing-unit!important; }
-.push--ends     { margin-top:   $base-spacing-unit!important; margin-bottom:$base-spacing-unit!important; }
-.push--sides    { margin-right: $base-spacing-unit!important; margin-left:  $base-spacing-unit!important; }
+.push           { margin:        $base-unit !important; }
+.push--top      { margin-top:    $base-unit !important; }
+.push--right    { margin-right:  $base-unit !important; }
+.push--bottom   { margin-bottom: $base-unit !important; }
+.push--left     { margin-left:   $base-unit !important; }
+.push--ends     { margin-top:    $base-unit !important; margin-bottom: $base-unit !important; }
+.push--sides    { margin-right:  $base-unit !important; margin-left:   $base-unit !important; }
 
 .push-half          { margin:       $half-spacing-unit!important; }
 .push-half--top     { margin-top:   $half-spacing-unit!important; }
@@ -107,31 +107,11 @@
 
 
 /**
- * Add a help cursor to any element that gives the user extra information on
- * `:hover`.
- */
-.informative{
-    cursor:help!important;
-}
-
-
-/**
  * Mute an object by reducing its opacity.
  */
-.muted{
+.muted {
     opacity:0.5!important;
     filter:alpha(opacity = 50)!important;
-}
-
-
-/**
- * Align items to the right where they imply progression/movement forward, e.g.:
- *
-   <p class=proceed><a href=#>Read more...</a></p>
- *
- */
-.proceed{
-    text-align:right!important;
 }
 
 
@@ -143,14 +123,6 @@
  */
 .go:after{
     content:"\00A0" "\00BB"!important;
-}
-
-
-/**
- * Apply capital case to an element (usually a `strong`).
- */
-.caps{
-    text-transform:uppercase!important;
 }
 
 
@@ -168,15 +140,13 @@
     position: absolute!important;
     width:1px!important;
 }
-.accessibility,
-.visuallyhidden{
+.v-hidden{
     @include accessibility;
 }
 @if $responsive{
     @each $state in palm, lap, lap-and-up, portable, desk, desk-wide{
         @include media-query(#{$state}){
-            .accessibility--#{$state},
-            .visuallyhidden--#{$state}{
+            .v-hidden--#{$state}{
                 @include accessibility;
             }
         }
