@@ -13,18 +13,24 @@ img{
 
 
 /**
- * Non-fluid images if you specify `width` and/or `height` attributes.
+ * Fixes issue with sprites in embedded Google Maps.
  */
-img[width],
-img[height]{
+#map-canvas img, 
+.map-canvas img {
     max-width:none;
 }
 
 
 /**
- * Rounded images.
+ * Rounded-cornered images.
  */
 .img--round { border-radius:$brand-round; }
+
+
+/**
+ * Circle images (image must be square).
+ */
+.img--circle { border-radius: 50%; }
 
 
 /**
