@@ -1,6 +1,17 @@
 /*------------------------------------*\
     $HEADINGS
 \*------------------------------------*/
+
+
+/**
+ * Remove margin: we want to decide when and where to adopt
+ * a vertical rhythm.
+ */
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+
 /**
  * As per: csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css
  *
